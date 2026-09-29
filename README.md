@@ -69,7 +69,7 @@ Sebelum sistem ini, proses PKL tersebar di berkas, grup chat, dan catatan pribad
 - **Manajemen dokumen** &mdash; format laporan resmi diunggah admin, lalu dipakai mahasiswa dan dosen dari berkas yang sama.
 - **Sidang dan presentasi** &mdash; penjadwalan sidang, peserta, penguji, serta input nilai final sudah tertata rapi.
 - **Sertifikat dengan verifikasi publik** &mdash; setiap sertifikat punya kode unik yang bisa dicek siapa pun tanpa login.
-- **Impor data massal** &mdash; data mahasiswa dan dosen bisa diimpor dari Excel, accompanied laporan baris yang gagal.
+- **Impor data massal** &mdash; data mahasiswa dan dosen bisa diimpor dari Excel, lengkap dengan laporan baris yang gagal.
 - **Audit log dan system health** &mdash; aksi sensitif tercatat dan bisa diekspor; halaman kesehatan sistem menampilkan status komponen penting.
 - **Landing page publik** &mdash; halaman depan tanpa login yang menjelaskan alur kerja setiap peran.
 
