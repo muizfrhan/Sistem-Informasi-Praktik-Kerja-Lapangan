@@ -1,0 +1,262 @@
+<x-app-layout>
+    {{-- Header Section --}}
+    <div
+        class="mb-8 bg-white border border-gray-200 rounded-2xl p-6 shadow-none">
+        <div class="flex items-center gap-4">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">Kelola Format Laporan</h1>
+                <p class="text-gray-900 text-sm">Upload dan kelola template format laporan PKL untuk
+                    mahasiswa
+                </p>
+            </div>
+        </div>
+        <div class="mt-4">
+            <div class="w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full"></div>
+        </div>
+    </div>
+
+    {{-- Success Message --}}
+
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+        {{-- Upload Form Section --}}
+        <div class="xl:col-span-1">
+            <div
+                class="bg-white border border-gray-200 rounded-2xl p-6 shadow-none sticky top-6">
+                <div class="mb-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-xl flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Upload Format</h3>
+                            <p class="text-sm text-gray-500">Tambah template baru</p>
+                        </div>
+                    </div>
+                    <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full"></div>
+                </div>
+
+                <form action="{{ route('admin.format.upload') }}" method="POST" enctype="multipart/form-data"
+                    class="space-y-6">
+                    @csrf
+                    {{-- Nama Format --}}
+                    <div class="space-y-2">
+                        <label for="nama" class="block text-sm font-semibold text-gray-900">
+                            Nama Format Laporan
+                            <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" name="nama" id="nama" required
+                            class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-indigo-400/50 focus:bg-white/10 transition-all duration-200"
+                            placeholder="Contoh: Template Laporan PKL 2025">
+                        @error('nama')
+                        <p class="text-red-500 text-xs mt-1 flex items-center gap-1">
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            {{ $message }}
+                        </p>
+                        @enderror
+                    </div>
+
+                    {{-- File Upload --}}
+                    <div class="space-y-2">
+                        <label for="file" class="block text-sm font-semibold text-gray-900">
+                            Upload File Template
+                            <span class="text-red-500">*</span>
+                        </label>
+                        <div class="relative">
+                            <input type="file" name="file" id="file" accept=".pdf,.doc,.docx" required
+                                class="block w-full text-sm text-gray-700 bg-white border border-gray-200 rounded-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-400/50 transition-all duration-200 hover:bg-gray-50 file:mr-4 file:py-3 file:px-4 file:rounded-l-xl file:border-0 file:text-sm file:font-semibold file:bg-gradient-to-r file:from-blue-600 file:to-cyan-600 file:text-white file:cursor-pointer file:hover:from-blue-700 file:hover:to-cyan-700 file:transition-all file:duration-200" />
+                        </div>
+                        <p class="text-xs text-gray-500 flex items-center gap-1">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Format: PDF, DOC, DOCX (Max. 100MB)
+                        </p>
+                        @error('file')
+                        <p class="text-red-500 text-xs mt-1 flex items-center gap-1">
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            {{ $message }}
+                        </p>
+                        @enderror
+                    </div>
+
+                    {{-- Submit Button --}}
+                    <div class="pt-2">
+                        <button type="submit"
+                            class="w-full group relative overflow-hidden bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold py-3 px-6 rounded-xl transform hover:scale-[1.02] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400/50 focus:ring-offset-2 focus:ring-offset-white">
+                            <span class="relative flex items-center justify-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
+                                    </path>
+                                </svg>
+                                Upload Format
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        {{-- Format List Section --}}
+        <div class="xl:col-span-2">
+            <div
+                class="bg-white border border-gray-200 rounded-2xl shadow-none overflow-hidden">
+                {{-- Card Header --}}
+                <div class="px-6 py-4 border-b border-gray-200">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Daftar Format Laporan</h3>
+                            <p class="text-sm text-gray-500">Template yang tersedia untuk mahasiswa
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Table Content --}}
+                <div class="overflow-x-auto">
+                    @forelse ($format as $i => $file)
+                    @if($loop->first)
+                    {{-- Table Header --}}
+                    <div
+                        class="hidden lg:grid lg:grid-cols-12 gap-4 px-6 py-3 bg-gray-50 border-b border-gray-200 text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                        <div class="col-span-1">No.</div>
+                        <div class="col-span-5">Nama Template</div>
+                        <div class="col-span-2">File</div>
+                        <div class="col-span-2">Upload</div>
+                        <div class="col-span-2 text-center">Aksi</div>
+                    </div>
+                    @endif
+
+                    {{-- Table Row / Card Item --}}
+                    <div
+                        class="group hover:bg-gray-100 transition-all duration-200 border-b border-gray-100 last:border-b-0">
+                        {{-- Desktop View --}}
+                        <div class="hidden lg:grid lg:grid-cols-12 gap-4 items-center px-6 py-4">
+                            {{-- Number --}}
+                            <div class="col-span-1">
+                                <span
+                                    class="inline-flex items-center justify-center w-8 h-8 bg-gray-100 text-gray-700 text-sm font-medium rounded-lg group-hover:bg-gray-200 transition-colors">
+                                    {{ $i + 1 }}
+                                </span>
+                            </div>
+                            {{-- Template Name --}}
+                            <div class="col-span-5 flex items-center gap-3">
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-gray-900 font-medium">{{ $file->nama }}</p>
+                                    <p class="text-xs text-gray-500">
+                                        {{ strtoupper(pathinfo($file->file, PATHINFO_EXTENSION)) }} Template
+                                    </p>
+                                </div>
+                            </div>
+                            {{-- File Download --}}
+                            <div class="col-span-2">
+                                <a href="{{ asset('storage/' . $file->file) }}" target="_blank"
+                                    class="inline-flex items-center gap-1.5 text-blue-700 hover:text-blue-900 text-sm font-medium transition-colors duration-200 hover:underline">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                        </path>
+                                    </svg>
+                                    Download
+                                </a>
+                            </div>
+                            {{-- Upload Date --}}
+                            <div class="col-span-2">
+                                <span class="text-xs text-gray-500">
+                                    {{ $file->created_at->format('d M Y') }}
+                                </span>
+                            </div>
+                            {{-- Actions --}}
+                            <div class="col-span-2 text-center">
+                                <form action="{{ route('admin.format.destroy', $file->id) }}" method="POST"
+                                    x-data="confirmForm({ title: 'Hapus template ini?', text: 'Template {{ $file->nama }} akan dihapus dan tidak dapat dikembalikan.', confirmText: 'Ya, hapus', cancelText: 'Batal', danger: true })"
+                                    x-on:submit="submit($event)"
+                                    class="inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"
+                                        class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-100 hover:bg-red-200 text-red-700 hover:text-red-900 text-sm font-medium rounded-lg transition-all duration-200 border border-red-200 hover:border-red-300">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                        Hapus
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    @empty
+                    {{-- Empty State --}}
+                    <div class="px-6 py-12 text-center">
+                        <div
+                            class="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-700 mb-2">Belum Ada Template</h3>
+                        <p class="text-sm text-gray-500 max-w-sm mx-auto">
+                            Belum ada format laporan yang diupload. Gunakan form di sebelah kiri untuk menambah template
+                            baru.
+                        </p>
+                    </div>
+                    @endforelse
+                </div>
+
+                {{-- Footer Info --}}
+                @if(count($format) > 0)
+                <div class="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                    <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center gap-2 text-gray-500">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Total {{ count($format) }} template tersedia</span>
+                        </div>
+                        <div class="text-gray-500 hidden sm:block">
+                            <span>Template dapat diunduh oleh mahasiswa</span>
+                        </div>
+                    </div>
+                </div>
+                @endif
+            </div>
+        </div>
+    </div>
+</x-app-layout>

@@ -1,0 +1,557 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   SIPKL DESIGN SYSTEM
+   Token warna, shape, tipografi, dan elevation ada di tailwind.config.js
+   (palet disalin dari template patch: form-login.html & dashboard.html).
+
+   Layer ini hanya mengimplementasikan pola komponen yang dipakai template.
+   ========================================================================== */
+
+@layer base {
+    /* Alpine menyembunyikan elemen x-show baru setelah JS jalan. */
+    [x-cloak] {
+        display: none !important;
+    }
+
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        @apply antialiased;
+    }
+
+    /* Scrollbar discreet, mengikuti surface hierarchy. */
+    * {
+        scrollbar-color: #c3c6d7 transparent;
+    }
+}
+
+@layer components {
+
+    /* --------------------------------------------------------------------
+       BUTTONS
+       Base: inline-flex, fokus = ring 2px primary dengan offset 2px.
+       ------------------------------------------------------------------- */
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 whitespace-nowrap
+               font-title-md rounded-lg border border-transparent
+               transition-all duration-200 select-none
+               disabled:opacity-60 disabled:pointer-events-none;
+    }
+
+    /* Primary : bg-primary-container -> on-primary-container (pola template) */
+    .btn-primary {
+        @apply btn bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary
+               shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
+               focus-visible:ring-offset-2;
+    }
+
+    .btn-secondary {
+        @apply btn bg-surface-container text-on-surface hover:bg-surface-container-high
+               focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
+               focus-visible:ring-offset-2;
+    }
+
+    .btn-danger {
+        @apply btn bg-error text-on-error hover:bg-error-container hover:text-on-error-container
+               focus:outline-none focus-visible:ring-2 focus-visible:ring-error
+               focus-visible:ring-offset-2;
+    }
+
+    .btn-success {
+        @apply btn bg-tertiary-container text-on-tertiary-container hover:bg-tertiary hover:text-on-tertiary
+               focus:outline-none focus-visible:ring-2 focus-visible:ring-tertiary
+               focus-visible:ring-offset-2;
+    }
+
+    /* Aksi sekunder tanpa border — untuk kartu hero. */
+    .btn-ghostish {
+        @apply btn bg-surface-container-low text-on-surface-variant
+               hover:bg-surface-container hover:text-on-surface
+               focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
+               focus-visible:ring-offset-2;
+    }
+
+    /* Ukuran: h tetap agar sejajar antar tipe tombol. */
+    .btn-sm {
+        @apply h-8 rounded-lg px-3 text-[13px];
+    }
+
+    .btn-md {
+        @apply h-10 px-4 text-[14px];
+    }
+
+    .btn-lg {
+        @apply h-12 px-6 text-[15px];
+    }
+
+    /* --------------------------------------------------------------------
+       BADGES
+       Pill kecil: border 1px, font 12px semibold, tidak wrap.
+       ------------------------------------------------------------------- */
+    .badge {
+        @apply inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border
+               px-2.5 py-0.5 text-[12px] font-semibold;
+    }
+
+    .badge-success {
+        @apply badge bg-tertiary-container text-on-tertiary-container border-tertiary-fixed-dim;
+    }
+
+    .badge-warning {
+        @apply badge bg-secondary-container text-secondary border-outline-variant;
+    }
+
+    .badge-danger {
+        @apply badge bg-error-container text-error border-none;
+    }
+
+    /* Netral & primary dideklarasikan di luar layer components (lihat bawah). */
+
+    /* --------------------------------------------------------------------
+       FORM FIELDS
+       Border default outline-variant, fokus primary dengan halo lembut.
+       ------------------------------------------------------------------- */
+    .field {
+        /* 16px di mobile: iOS Safari auto-zoom halaman kalau font < 16px saat
+           field difokuskan. Kembali ke body-md (14px) di sm+ supaya density
+           desktop tetap rapat.
+           text-left + w-full + mx-0 dikunci eksplisit: mencegah field ikut
+           mewarisi text-align dari container yang sesaat aktif, dan menjaga
+           semua kolom rata kiri walau parent-nya flex/grid. */
+        @apply block w-full mx-0 h-[46px] rounded-lg border border-outline-variant bg-white
+               px-3.5 py-2 text-left text-[16px] sm:text-body-md text-on-surface
+               placeholder:text-outline
+               transition-all duration-200
+               focus:border-primary focus:shadow-[0_0_0_3px_rgba(0,74,198,0.15)]
+               focus:outline-none focus:ring-0;
+    }
+
+    textarea.field {
+        @apply h-auto min-h-[96px] py-2.5 text-[16px] sm:text-body-md;
+    }
+
+    select.field {
+        /* Panah dropdown bawaan plugin @tailwindcss/forms dimatikan, pakai panah kustom.
+
+           Padding kiri/kanan SENGAJA tidak dideklarasikan di sini. Aturan
+           `select.field` (spesifikasi 0,1,1) mengalahkan utility `pl-10` /
+           `pr-10` dari blade (0,1,0), sehingga ikon dan ruang panah sempat
+           hilang dan teks select tidak sejajar dengan input biasa.
+           Padding tetap datang dari .field + utility yang diteruskan blade,
+           jadi semua kolom rata pada posisi yang sama. */
+        @apply appearance-none bg-no-repeat cursor-pointer;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23565e74' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 0.7rem center;
+        background-size: 1.05em 1.05em;
+    }
+
+    /* Opsi dropdown native mengikuti font & warna field agar tidak terlihat
+       seperti elemen dari sistem operasi yang berbeda. */
+    select.field option {
+        @apply text-body-md text-on-surface bg-white;
+    }
+
+    .field-error {
+        @apply border-error focus:border-error
+               focus:shadow-[0_0_0_3px_rgba(186,26,26,0.15)];
+    }
+
+    .field-label {
+        @apply block font-label-md text-on-surface;
+    }
+
+    .field-hint {
+        @apply font-label-sm text-[11px] text-outline leading-snug;
+    }
+
+    .field-error-text {
+        @apply font-body-sm text-[12px] text-error leading-snug;
+    }
+
+    /* Checkbox 18px, radius kecil, border outline-variant. */
+    .checkbox {
+        @apply w-[18px] h-[18px] rounded border-outline-variant bg-white
+               text-primary-container focus:ring-0
+               focus:shadow-[0_0_0_3px_rgba(37,99,235,0.15)]
+               cursor-pointer shrink-0 transition-colors duration-200;
+    }
+
+    /* Baris checkbox + teks: klik area mana pun untuk toggle. */
+    .check-row {
+        @apply flex items-start gap-2.5 p-3 rounded-lg border border-outline-variant
+               bg-white cursor-pointer select-none
+               transition-colors duration-150
+               hover:bg-surface-container-low;
+    }
+
+    .check-row:has(.checkbox:checked) {
+        @apply border-primary/40 bg-primary-container/[0.04];
+    }
+
+    /* --------------------------------------------------------------------
+       FORM SECTIONS — grup field bernomor pada halaman register
+       ------------------------------------------------------------------- */
+
+    /* Ditulis sebagai CSS biasa, bukan @apply.
+
+       Build Vite memotong isi @apply blok ini menjadi { width:100% } saja,
+       padahal tailwindcss CLI menghasilkan output lengkap. Karena padding,
+       border, dan background hilang, section jadi transparan tanpa spacing
+       sehingga isinya merapat dan tombol submit terdorong ke bawah form. */
+    .form-section {
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        border-width: 1px;
+        border-color: #c3c6d7;
+        background-color: #eff4ff;
+    }
+
+    .form-section > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 1rem;
+    }
+
+    @media (min-width: 640px) {
+        .form-section {
+            padding: 1.25rem;
+        }
+    }
+
+    .form-section-head {
+        @apply flex items-center gap-3;
+    }
+
+    .form-section-badge {
+        @apply w-7 h-7 shrink-0 rounded-full bg-primary text-white
+               flex items-center justify-center font-title-sm text-[13px] font-semibold;
+    }
+
+    .form-section-title {
+        @apply font-title-sm text-[14px] font-semibold text-on-surface leading-tight;
+    }
+
+    .form-section-desc {
+        @apply text-body-sm text-[12px] text-on-surface-variant leading-snug;
+    }
+
+    /* Pasangan field dua kolom.
+
+       PENTING: jangan memberi `display:flex` pada anak grid lewat
+       `.form-grid > *`. Wrapper field (`.space-y-1.5`) lalu ikut jadi flex
+       item, grid auto-placement rusak, dan semua anak mendarat di kolom
+       kedua. Height alignment cukup dijamin oleh align-items bawaan grid. */
+    .form-grid {
+        @apply grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-4 items-start;
+    }
+
+    /* Anakan wrapper field di dalam grid: boleh flex, tapi TIDAK boleh
+       h-full (menjadi resolved height liar saat parent height:auto). */
+    .form-grid > .space-y-1\.5 {
+        @apply flex flex-col min-w-0;
+    }
+
+    .field-foot {
+        @apply pt-1.5;
+    }
+
+    /* --------------------------------------------------------------------
+       PASSWORD STRENGTH METER
+       ------------------------------------------------------------------- */
+    .strength-track {
+        @apply h-1.5 flex-1 overflow-hidden rounded-full bg-surface-container-high;
+    }
+
+    .strength-fill {
+        @apply h-full rounded-full transition-all duration-300;
+    }
+
+    /* --------------------------------------------------------------------
+       CARDS & PANELS
+       ------------------------------------------------------------------- */
+    .card {
+        @apply bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm;
+    }
+
+    .card-pad {
+        @apply p-4 sm:p-6;
+    }
+
+    .card-header {
+        @apply flex items-center justify-between gap-3 border-b border-surface-container px-4 py-3;
+    }
+
+    .btn-spinner {
+        @apply inline-block w-4 h-4;
+    }
+}
+
+/* ==========================================================================
+   KELAS DI LUAR @layer components
+
+   Tailwind memangkas isi @layer components berdasarkan pemakaian di
+   `content` (hanya blade). Kelas di bawah sengaja tidak dimasukkan ke layer:
+
+     - `.sipkl-*` dirujuk dari string di resources/js/app.js (mis.
+       sipklEl('div', 'sipkl-toast__bar')), yang tidak dipindai Tailwind.
+     - `.badge-neutral`, `.badge-primary`, `.card-header` dipakai opsional
+       dan belum terpakai di view mana pun saat ini.
+
+   Kalau dipindah ke dalam layer, semuanya akan hilang dari hasil build.
+   ========================================================================== */
+
+/* Badge netral & primary: disamakan dengan tone badge lain agar kontras
+   tetap di atas ambang WCAG AA. */
+.badge-neutral {
+    @apply badge bg-surface-container text-on-surface-variant border-outline-variant;
+}
+
+.badge-primary {
+    @apply badge bg-primary-container text-on-primary-container border-transparent;
+}
+
+.card-header {
+    @apply flex items-center justify-between gap-3 border-b border-surface-container px-4 py-3;
+}
+
+/* --------------------------------------------------------------------
+   MODAL / DIALOG (dipakai dialog konfirmasi + flash messages)
+   ------------------------------------------------------------------- */
+.sipkl-overlay {
+    @apply fixed inset-0 z-[100] flex items-center justify-center p-4;
+}
+
+.sipkl-overlay[hidden] {
+    display: none;
+}
+
+.sipkl-overlay__backdrop {
+    @apply absolute inset-0 bg-secondary/50 backdrop-blur-sm;
+    animation: sipkl-fade 0.18s ease-out;
+}
+
+.sipkl-dialog {
+    @apply relative w-full max-w-md overflow-hidden rounded-xl border border-outline-variant
+           bg-surface-container-lowest shadow-level-4;
+    animation: sipkl-pop 0.22s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+
+.sipkl-dialog--wide {
+    @apply max-w-lg;
+}
+
+.sipkl-dialog__head {
+    @apply flex items-start gap-3 pt-5 pb-4 px-5;
+}
+
+.sipkl-dialog__badge {
+    @apply grid h-10 w-10 shrink-0 place-items-center rounded-full;
+}
+
+.sipkl-dialog__badge--info {
+    @apply bg-primary-fixed text-on-primary-fixed-variant;
+}
+
+.sipkl-dialog__badge--success {
+    @apply bg-tertiary-container text-on-tertiary-container;
+}
+
+.sipkl-dialog__badge--warning {
+    @apply bg-secondary-container text-secondary;
+}
+
+.sipkl-dialog__badge--error {
+    @apply bg-error-container text-error;
+}
+
+.sipkl-dialog__glyph {
+    @apply block text-[22px] leading-none;
+}
+
+.sipkl-dialog__headtext {
+    @apply min-w-0 flex-1 pt-0.5;
+}
+
+.sipkl-dialog__title {
+    @apply font-title-md font-bold text-on-surface;
+}
+
+.sipkl-dialog__text {
+    @apply mt-1.5 font-body-sm text-on-surface-variant leading-relaxed;
+}
+
+.sipkl-dialog__body {
+    @apply px-5 pb-4;
+}
+
+.sipkl-dialog__rows {
+    @apply rounded-lg border border-outline-variant bg-surface-container-lowest divide-y divide-surface-container;
+}
+
+.sipkl-dialog__row {
+    @apply flex items-center justify-between gap-4 px-3.5 py-2.5;
+}
+
+.sipkl-dialog__key {
+    @apply shrink-0 font-label-sm text-outline;
+}
+
+.sipkl-dialog__val {
+    @apply min-w-0 truncate text-right font-body-sm text-on-surface;
+}
+
+.sipkl-dialog__note {
+    @apply mt-3 flex items-center gap-2 text-[12px] text-on-surface-variant;
+}
+
+.sipkl-dialog__foot {
+    @apply flex flex-col-reverse gap-2 border-t border-surface-container
+           bg-surface-container-lowest px-5 py-4 sm:flex-row sm:justify-end;
+}
+
+.sipkl-progress {
+    @apply h-1 w-full overflow-hidden rounded-full bg-surface-container-high;
+}
+
+.sipkl-progress__bar {
+    @apply h-full rounded-full bg-primary-container;
+    transition: width 1s linear;
+}
+
+/* --------------------------------------------------------------------
+   TOASTS
+   ------------------------------------------------------------------- */
+.sipkl-toasts {
+    @apply fixed top-4 right-4 z-[110] flex flex-col items-end gap-2
+           w-[min(22rem,calc(100vw-2rem))];
+}
+
+.sipkl-toast {
+    @apply flex w-full items-start gap-2.5 overflow-hidden rounded-lg border border-outline-variant
+           bg-surface-container-lowest px-3.5 py-3 shadow-level-3;
+    animation: sipkl-slide 0.2s ease-out;
+}
+
+.sipkl-toast__icon {
+    @apply grid h-6 w-6 shrink-0 place-items-center rounded-full;
+}
+
+.sipkl-toast__icon--info {
+    @apply bg-primary-fixed text-on-primary-fixed-variant;
+}
+
+.sipkl-toast__icon--success {
+    @apply bg-tertiary-container text-on-tertiary-container;
+}
+
+.sipkl-toast__icon--warning {
+    @apply bg-secondary-container text-secondary;
+}
+
+.sipkl-toast__icon--error {
+    @apply bg-error-container text-error;
+}
+
+.sipkl-toast__body {
+    @apply min-w-0 flex-1;
+}
+
+.sipkl-toast__title {
+    @apply font-body-sm text-on-surface;
+}
+
+.sipkl-toast__close {
+    @apply -mt-0.5 -mr-0.5 shrink-0 rounded p-0.5 text-outline transition-colors duration-150;
+}
+
+/* Progress bar lifecycle di dasar toast (dikendalikan app.js). */
+.sipkl-toast__bar {
+    height: 2px;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: #c3c6d7;
+    animation: sipkl-drain var(--toast-life, 5000ms) linear forwards;
+}
+
+.sipkl-toast__bar--info {
+    background-color: #2563eb;
+}
+
+.sipkl-toast__bar--success {
+    background-color: #007f36;
+}
+
+.sipkl-toast__bar--warning {
+    background-color: #565e74;
+}
+
+.sipkl-toast__bar--error {
+    background-color: #ba1a1a;
+}
+
+@keyframes sipkl-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes sipkl-pop {
+    from {
+        opacity: 0;
+        transform: translateY(14px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes sipkl-slide {
+    from {
+        opacity: 0;
+        transform: translateX(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes sipkl-drain {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+@layer utilities {
+    /**
+     * Naikkan kontras `text-gray-400` (#9ca3af) yang terlalu redup di atas putih.
+     *
+     * #9ca3af di atas #ffffff hanya mencapai 2.54:1, sedangkan WCAG AA menuntut
+     * 4.5:1 untuk teks normal. Token ini dipakai luas untuk teks petunjuk dan
+     * deskripsi (empty state, hint stat-card, subjudul tabel, keterangan
+     * timeline), sehingga teksnya nyaris tak terbaca.
+     *
+     * Di sini TIDAK mengubah class di tiap view — satu override di lapisan
+     * utilities cukup untuk semuanya. Nilai #6b7280 menghasilkan 4.83:1 di atas
+     * putih dan 4.61:1 di atas surface-container (#e5eeff).
+     */
+    .text-gray-400 {
+        color: #6b7280;
+    }
+}

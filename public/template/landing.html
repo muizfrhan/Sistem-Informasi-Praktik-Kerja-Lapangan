@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>PKL CONNECT - Sistem Informasi Praktik Kerja Lapangan</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-highest":"#d3e4fe","on-primary-fixed-variant":"#003ea8","primary-fixed":"#dbe1ff","tertiary-fixed":"#7ffc97","primary-container":"#2563eb","secondary-fixed-dim":"#bec6e0","secondary-fixed":"#dae2fd","tertiary-container":"#007f36","surface-container-high":"#dce9ff","error-container":"#ffdad6","on-error-container":"#93000a","on-secondary":"#ffffff","error":"#ba1a1a","on-secondary-fixed":"#131b2e","on-tertiary-fixed-variant":"#005320","tertiary-fixed-dim":"#62df7d","surface-container-lowest":"#ffffff","on-error":"#ffffff","inverse-on-surface":"#eaf1ff","primary-fixed-dim":"#b4c5ff","inverse-primary":"#b4c5ff","on-primary-fixed":"#00174b","primary":"#004ac6","on-background":"#0b1c30","tertiary":"#006329","secondary":"#565e74","surface-bright":"#f8f9ff","on-secondary-fixed-variant":"#3f465c","surface-dim":"#cbdbf5","on-primary-container":"#eeefff","surface-variant":"#d3e4fe","on-secondary-container":"#5c647a","outline":"#737686","on-primary":"#ffffff","surface-tint":"#0053db","on-tertiary-container":"#c7ffca","outline-variant":"#c3c6d7","surface-container":"#e5eeff","on-tertiary-fixed":"#002109","surface-container-low":"#eff4ff","on-surface":"#0b1c30","on-tertiary":"#ffffff","surface":"#f8f9ff","on-surface-variant":"#434655","secondary-container":"#dae2fd","background":"#f8f9ff","inverse-surface":"#213145"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-md":"1rem","space-xl":"2rem","margin-mobile":"1rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter-mobile":"1rem","margin":"2rem","gutter":"1.5rem"},"fontFamily":{"title-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"display":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"display-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"title-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0.005em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6"><div class="flex items-center gap-3 shrink-0"><img alt="PKL CONNECT Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VzehvnPP0F156D0uI0DJjGbD5AWBLWPLwblwa4PZqtSq-se-vCaGJKw677JVkumCQHoHNtar6f9d3867LrbOC_WVMr6t_FLbV7KCa8sPnf6jTaKvNc2sPUqgrwA3llDm4Cn_0rnBim90xXHsHEjszt85xCB6KtmGlRYIurgI0OMi8sJ9t14EIyk-nWayE9onhndNIGEjSG1VaSbmEwA--w4-yj0iW67VImov0Aw50wldVu7VrSVA-BAsys"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight leading-none">PKL CONNECT</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium leading-tight">Sistem Informasi Praktik Kerja Lapangan</span></div></div><nav class="hidden xl:flex items-center gap-6" data-active-classes="text-primary font-title-sm"><a aria-current="page" class="transition-colors text-primary font-title-sm" data-path="beranda" href="#">Beranda</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="tentang" href="#">Tentang</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="fitur" href="#">Fitur</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="alur-pkl" href="#">Alur PKL</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="statistik" href="#">Statistik</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">FAQ</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="kontak" href="#">Kontak</a></nav><div class="flex items-center gap-3 shrink-0"><a class="hidden sm:inline-flex items-center justify-center font-title-sm text-title-sm text-primary px-space-md py-space-sm rounded-lg hover:bg-surface-container-high transition-colors" data-path="login" href="#">Bantuan &amp; Panduan</a><a class="inline-flex items-center justify-center font-title-sm text-title-sm bg-primary-container text-on-primary px-space-md py-space-sm rounded-lg shadow-sm hover:opacity-95 transition-opacity" data-path="login" href="#">Masuk Sistem</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0s1j3Pw3fhHrs4LlzZYTHOtXuCDiPJ_AZzvS-3L-1LYzBgO3cCD17LVUk-D2iaa7zmDexjIm8Kyx4__iYt_KDXC6ifUoaDR9zu8o3Lnnw8g4PIfi2gJmK5MdMyqBugwCnuLZ3yiNfoBziPIQoj0wswJbLPf-FkBkQzKiqc-J5D5EKVc4_ZfcOaQuuGmmsqoOWNUL_NUsog3t4y3zYYOsvzz70Qs-evdsgEiqQbC31kcthbKgJC9dqrg"/></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative overflow-hidden bg-gradient-to-b from-surface-container-low via-surface to-surface-container-low/40 pt-10 pb-20 lg:pt-16 lg:pb-28">
+<!-- Subtle Ambient Backdrop Blurs -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary-fixed/40 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-32 w-[32rem] h-[32rem] rounded-full bg-surface-container-highest/60 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Hero Copy -->
+<div class="lg:col-span-7 flex flex-col items-start text-left">
+<!-- Release Badge -->
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest shadow-sm mb-6">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-primary font-semibold tracking-wide">
+              Versi 3.4 Telah Rilis — Terintegrasi dengan 120+ Industri Nasional
+            </span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display text-display text-on-surface font-extrabold tracking-tight lg:text-[46px] lg:leading-[54px] mb-6">
+            Kelola Praktik Kerja Lapangan Lebih <span class="text-primary underline decoration-primary/20 decoration-wavy underline-offset-8">Mudah &amp; Terstruktur</span>
+</h1>
+<!-- Subheadline -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8 leading-relaxed">
+            Satu platform enterprise untuk menghubungkan siswa, sekolah/kampus, guru pembimbing, dan mitra industri dalam seluruh siklus Prakerin yang transparan, presisi, dan akuntabel.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-10">
+<a class="inline-flex items-center justify-center gap-2 font-title-sm text-title-sm bg-primary-container hover:bg-primary text-on-primary px-7 py-3.5 rounded-xl shadow-md transition-all duration-200 group" href="#alur-prakerin">
+<span>Mulai Sekarang</span>
+<span class="material-symbols-outlined text-lg transition-transform duration-200 group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 font-title-sm text-title-sm bg-surface-container-lowest hover:bg-surface-container-high text-on-surface px-6 py-3.5 rounded-xl shadow-sm transition-all duration-200" href="#preview-role">
+<span class="material-symbols-outlined text-lg text-primary">play_circle</span>
+<span>Pelajari Sistem / Demo Live</span>
+</a>
+</div>
+<!-- Trust Badges Bar -->
+<div class="pt-6 flex flex-wrap items-center gap-y-3 gap-x-6 text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Terakreditasi A Vokasi</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">school</span>
+<span>Standar Kurikulum Merdeka</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">speed</span>
+<span>99.9% Cloud SLA</span>
+</div>
+</div>
+</div>
+<!-- Right Hero Mockup Card -->
+<div class="lg:col-span-5 relative">
+<!-- Ambient Glow under Mockup -->
+<div class="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl transform rotate-1 scale-95"></div>
+<!-- Floating Stat Pill 1 (Top Left Overlap) -->
+<div class="absolute -top-4 -left-4 z-20 bg-surface-container-lowest/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-lg flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/15 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-base">verified</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Status Log</p>
+<p class="font-title-sm text-title-sm text-on-surface">98% Jurnal Terverifikasi</p>
+</div>
+</div>
+<!-- Floating Stat Pill 2 (Bottom Right Overlap) -->
+<div class="absolute -bottom-5 -right-3 z-20 bg-surface-container-lowest/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-lg flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container/15 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-base">apartment</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Industri Aktif</p>
+<p class="font-title-sm text-title-sm text-on-surface">450+ Penempatan Aktif</p>
+</div>
+</div>
+<!-- Main Dashboard Mock Card -->
+<div class="relative z-10 bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden p-5 sm:p-6">
+<!-- Mock Header Bar -->
+<div class="flex items-center justify-between pb-4 mb-4 bg-surface-container-low/50 -mx-6 -mt-6 px-6 pt-5">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error/70"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-fixed"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary/70"></span>
+<span class="ml-2 font-label-sm text-label-sm text-on-surface-variant font-medium">PKL-Workspace • Dashboard Siswa</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-semibold">Aktif Berjalan</span>
+</div>
+<!-- Profile & Active Company Snippet -->
+<div class="flex items-center gap-4 p-3.5 rounded-xl bg-surface-container-low mb-4">
+<img class="w-12 h-12 rounded-xl object-cover" data-alt="Portrait of Indonesian vocational high school student wearing tidy formal white uniform shirt with lanyard id badge in bright computer laboratory room, soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO5FnTi4XeCZ8U1puD6bFGmr-zi-vw-P2GNIOEXssOyygqrKXqFqLWWNoXQY_ZKZ2hBbY47H09AgdDJ9n-XDdCMh9BUjLPNS39kvzWNYYxUa31ekkSG1nYTZLYBXag3VeeszGf79pGCjtQvO0JtM6G4uOLE6qSOzwWZWd22GQmygmvBzTDjvTf0JRt55FWIcecq7zmy1-RJV-qkhDPEM17eI9v6w0QATBuJjQkDLgLzccRbCtJC0LgMw"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="font-title-sm text-title-sm text-on-surface font-semibold truncate">Ahmad Fauzi Ramadhan</h4>
+<span class="font-label-sm text-label-sm text-primary font-bold">RPL - XII A</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">PT Telkom Indonesia (Divisi Cloud Enterprise)</p>
+</div>
+</div>
+<!-- Progress Meter Bar -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm mb-4">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Progres Masa PKL (Minggu 12 dari 16)</span>
+<span class="font-title-sm text-title-sm text-primary font-bold">82%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-high overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-gradient-to-r from-primary to-primary-container transition-all duration-500" style="width: 82%;"></div>
+</div>
+<div class="flex items-center justify-between mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>Mulai: 15 Juli 2024</span>
+<span>Selesai: 15 November 2024</span>
+</div>
+</div>
+<!-- Mini Live Activity Feed -->
+<div class="flex flex-col gap-2.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Aktivitas Terkini</span>
+<div class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">menu_book</span>
+<div class="flex-1 min-w-0">
+<p class="font-title-sm text-title-sm text-on-surface leading-tight">Jurnal Lapangan Hari Ini Diunggah</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Implementasi CI/CD Pipeline microservice Kubernetes</p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary shrink-0">10m lalu</span>
+</div>
+<div class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-tertiary text-lg mt-0.5">check_circle</span>
+<div class="flex-1 min-w-0">
+<p class="font-title-sm text-title-sm text-on-surface leading-tight">Presensi Geofencing Terkonfirmasi</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">07:54 WIB • Radius 12m dari Kantor DUDI</p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary shrink-0">07:55</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- STATISTIK UTAMA (Impact Metrics) -->
+<section class="py-12 bg-surface-container-lowest shadow-sm relative z-20">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Metric 1 -->
+<div class="flex items-center gap-4 p-5 rounded-2xl bg-surface-container-low/50 hover:bg-surface-container-low transition-all">
+<div class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-2xl">groups</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">1.250+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Siswa PKL Aktif</p>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="flex items-center gap-4 p-5 rounded-2xl bg-surface-container-low/50 hover:bg-surface-container-low transition-all">
+<div class="w-14 h-14 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-2xl">domain</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">120+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Mitra Industri &amp; BUMN</p>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="flex items-center gap-4 p-5 rounded-2xl bg-surface-container-low/50 hover:bg-surface-container-low transition-all">
+<div class="w-14 h-14 rounded-xl bg-tertiary-container text-on-tertiary flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-2xl">workspace_premium</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">85+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Guru Pembimbing Ahli</p>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="flex items-center gap-4 p-5 rounded-2xl bg-surface-container-low/50 hover:bg-surface-container-low transition-all">
+<div class="w-14 h-14 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-2xl">rule</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">98%</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Presensi &amp; Jurnal Tervalidasi</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FITUR UTAMA SISTEM (8 Interactive Feature Cards) -->
+<section class="py-20 lg:py-28 bg-surface" id="fitur-sistem">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold px-3 py-1 bg-surface-container-highest rounded-full mb-3">
+          Kapabilitas Terpadu
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-4">
+          Fitur Komprehensif Siklus Prakerin Vokasi
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Dirancang khusus untuk memenuhi instrumen akreditasi, memangkas birokrasi manual, dan menjamin keselarasan kurikulum dengan kebutuhan riil Dunia Usaha Dunia Industri (DUDI).
+        </p>
+</div>
+<!-- Feature Bento Grid (8 Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-5 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">hub</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold mb-2">Penempatan Otomatis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Smart matching keahlian siswa dengan kuota formasi industri secara adil, transparan, dan terstruktur tanpa overlapping slot.
+          </p>
+</div>
+<!-- Feature 2 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-5 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">location_on</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold mb-2">Geofencing &amp; Presensi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Validasi kehadiran siswa berbasis radius GPS kantor DUDI, selfie liveness check, serta modul perizinan terverifikasi instan.
+          </p>
+</div>
+<!-- Feature 3 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-5 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">history_edu</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold mb-2">Jurnal Harian Digital</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Pencatatan rincian aktivitas, kendala teknis, bukti foto hasil kerja dengan fitur verifikasi 1-klik oleh mentor lapangan.
+          </p>
+</div>
+<!-- Feature 4 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-5 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">record_voice_over</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold mb-2">Log Bimbingan Lapangan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Monitoring berkala guru pembimbing sekolah via catatan monitoring visit, feedback berkala, dan sinkronisasi capaian kompetensi.
+          </p>
+</div>
+<!-- Feature 5 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-5 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">fact_check</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold mb-2">Penilaian Multi-Aspek</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Form rubrik penilaian 8 indikator kompetensi (soft &amp; hard skills), konversi bobot otomatis menjadi predikat rapor vokasi.
+          </p>
+</div>
+<!-- Feature 6 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-5 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">qr_code_2</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold mb-2">Sertifikat &amp; E-Sign QR</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Penerbitan sertifikat digital resmi ber-QR code anti-pemalsuan yang ditandatangani bersama kepala instansi dan DUDI.
+          </p>
+</div>
+<!-- Feature 7 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-5 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">analytics</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold mb-2">Laporan Analitik &amp; Audit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Rekap komprehensif kehadiran, statistik jurnal, dan log aktivitas yang siap diekspor sekali klik untuk kebutuhan borang akreditasi.
+          </p>
+</div>
+<!-- Feature 8 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-5 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">admin_panel_settings</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold mb-2">Multi-Role Access Control</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Hak akses granular dan terisolasi untuk Administrator Hubin, Guru Pembimbing, Mentor Industri DUDI, hingga Siswa Prakerin.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ALUR PRAKERIN INTERAKTIF (01 - 09 Visual Process Flow) -->
+<section class="py-20 bg-surface-container-low/70" id="alur-prakerin">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold px-3 py-1 bg-surface-container-highest rounded-full">
+            Alur Terstandarisasi
+          </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-3">
+            9 Tahapan Pelaksanaan Praktik Kerja Lapangan
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-2 md:mt-0">
+          Proses tertata dari pra-pelaksanaan, operasional di industri, hingga pelaporan akhir dan sertifikasi kompetensi.
+        </p>
+</div>
+<!-- Horizontal Scrollable Stepper Ribbon -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-9 gap-4">
+<!-- Step 1 -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow transition-shadow relative">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm text-headline-sm text-primary font-black">01</span>
+<span class="material-symbols-outlined text-primary text-base">how_to_reg</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-snug mb-1">Registrasi Siswa</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Lengkapi biodata portofolio &amp; jurusan.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow transition-shadow relative">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm text-headline-sm text-primary font-black">02</span>
+<span class="material-symbols-outlined text-primary text-base">domain_add</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-snug mb-1">Pengajuan DUDI</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Pilih industri mitra atau mandiri.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow transition-shadow relative">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm text-headline-sm text-primary font-black">03</span>
+<span class="material-symbols-outlined text-primary text-base">mail</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-snug mb-1">Verifikasi &amp; Surat</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Surat pengantar otomatis Hubin.</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow transition-shadow relative">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm text-headline-sm text-primary font-black">04</span>
+<span class="material-symbols-outlined text-primary text-base">business_center</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-snug mb-1">Penempatan DUDI</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Konfirmasi penerimaan mentor resmi.</p>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow transition-shadow relative">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm text-headline-sm text-primary font-black">05</span>
+<span class="material-symbols-outlined text-primary text-base">pin_drop</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-snug mb-1">Absensi Geofence</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Presensi masuk &amp; pulang real-time.</p>
+</div>
+<!-- Step 6 -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow transition-shadow relative">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm text-headline-sm text-primary font-black">06</span>
+<span class="material-symbols-outlined text-primary text-base">edit_note</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-snug mb-1">Jurnal Digital</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Input kegiatan berkala harian.</p>
+</div>
+<!-- Step 7 -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow transition-shadow relative">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm text-headline-sm text-primary font-black">07</span>
+<span class="material-symbols-outlined text-primary text-base">support_agent</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-snug mb-1">Bimbingan Rutin</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Monitoring guru visit &amp; online.</p>
+</div>
+<!-- Step 8 -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow transition-shadow relative">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm text-headline-sm text-primary font-black">08</span>
+<span class="material-symbols-outlined text-primary text-base">grade</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-snug mb-1">Penilaian Mentor</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Evaluasi rubrik DUDI &amp; sekolah.</p>
+</div>
+<!-- Step 9 -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow transition-shadow relative">
+<div class="flex items-center justify-between mb-3">
+<span class="font-headline-sm text-headline-sm text-tertiary font-black">09</span>
+<span class="material-symbols-outlined text-tertiary text-base">workspace_premium</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold leading-snug mb-1">Sertifikat Resmi</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">E-Sertifikat QR &amp; Laporan Final.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ROLE-BASED DASHBOARD PREVIEW TAB -->
+<section class="py-20 lg:py-28 bg-surface" id="preview-role">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-10">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold px-3 py-1 bg-surface-container-highest rounded-full mb-3">
+          Ruang Kerja Personal
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-3">
+          Satu Sistem, Berbagai Peran Spesifik
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Pilih profil di bawah untuk melihat bagaimana antarmuka menyesuaikan kebutuhan setiap pemangku kepentingan.
+        </p>
+</div>
+<!-- Segmented Buttons Switcher -->
+<div class="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-surface-container-low rounded-2xl max-w-xl mx-auto mb-12 shadow-inner">
+<button class="role-tab-btn flex-1 py-2.5 px-4 rounded-xl font-title-sm text-title-sm text-on-primary bg-primary shadow-sm transition-all text-center" id="tab-btn-siswa" onclick="switchRole('siswa')">
+          Siswa
+        </button>
+<button class="role-tab-btn flex-1 py-2.5 px-4 rounded-xl font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-all text-center" id="tab-btn-admin" onclick="switchRole('admin')">
+          Admin Sekolah
+        </button>
+<button class="role-tab-btn flex-1 py-2.5 px-4 rounded-xl font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-all text-center" id="tab-btn-guru" onclick="switchRole('guru')">
+          Guru Pembimbing
+        </button>
+<button class="role-tab-btn flex-1 py-2.5 px-4 rounded-xl font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-all text-center" id="tab-btn-mentor" onclick="switchRole('mentor')">
+          Mentor Industri
+        </button>
+</div>
+<!-- Panel Siswa -->
+<div class="role-panel grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface-container-lowest p-8 lg:p-12 rounded-3xl shadow-md" id="role-panel-siswa">
+<div class="lg:col-span-6 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 text-primary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-lg">school</span> Portal Mandiri Siswa
+          </div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Catat Presensi, Jurnal Harian &amp; Pantau Evaluasi dalam Satu Genggaman</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Siswa dapat melakukan check-in radius geofence di tempat magang, mengunggah dokumentasi kerja dengan mudah, serta melihat catatan bimbingan dari guru maupun mentor secara transparan tanpa buku kendali kertas yang rentan hilang.
+          </p>
+<ul class="flex flex-col gap-2.5 mt-2 text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+              Presensi selfie otomatis tervalidasi GPS geofencing
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+              Draf dan riwayat jurnal harian tersinkronisasi otomatis
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+              Akses cepat unduh sertifikat ber-QR setelah masa PKL rampung
+            </li>
+</ul>
+</div>
+<div class="lg:col-span-6">
+<img class="w-full h-80 rounded-2xl object-cover shadow-sm" data-alt="High-resolution crisp digital user interface mockup of student internship attendance portal showing daily log entry form, interactive map radius check-in, and timeline progress bar, clean minimalist design with blue accent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMmj3xdUzolPAWkaWtBIUWerIcpYyO6FzyjVxgoF-FzXKUiD5x6ouTsLotZHFG2-2erQ-oMtvGLzL0BY7ngvy8eKi9GStX_J9cUSB5eTWx6nPJk8r8Fn7EQTMI636j7U6IKmdBzQtZT5vrqe5j2FKvDDfmblyqtfMn3BF5ERcjvQnfKJyYNrNYO88bBigRl_jTdOXyKbtomH_UrGivRxVSm0zr7JlAmQwB_TaGMll0VEINinC-dHC0Iw"/>
+</div>
+</div>
+<!-- Panel Admin -->
+<div class="role-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface-container-lowest p-8 lg:p-12 rounded-3xl shadow-md" id="role-panel-admin">
+<div class="lg:col-span-6 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 text-primary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-lg">admin_panel_settings</span> Hubin &amp; Kepala Program Keahlian
+          </div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Pusat Kendali Mitra Industri, Kuota Formasi &amp; Surat Perizinan Massal</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Admin Hubungan Industri (Hubin) dapat mendistribusikan ratusan siswa ke mitra DUDI, mencetak otomatis surat tugas bermaterai digital, serta mengawasi status persetujuan MoU dalam dashboard terpadu.
+          </p>
+<ul class="flex flex-col gap-2.5 mt-2 text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+              Penerbitan surat pengantar &amp; MoU otomatis format resmi
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+              Manajemen master data DUDI, kuota penempatan &amp; pembimbing
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+              Ekspor rekap kehadiran &amp; nilai akhir format Dapodik
+            </li>
+</ul>
+</div>
+<div class="lg:col-span-6">
+<img class="w-full h-80 rounded-2xl object-cover shadow-sm" data-alt="Modern enterprise analytics dashboard showing school administrator interface with placement tables, company partnership statuses, pie charts of department quotas, and export buttons, clean slate color theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEKbBj_pt0PYz35IkyMIjH5a5usbkmnE3tBiwxAKp_kzLs7fnXfBiFWYIpHoWLtDLQw45sUbdSC7NC4tujopKWKBeRtG3e7f1Bi7QvBpfyUAVzsuQDkQvFoxXSyZBz14qtLaZj1MB3pZ4dIfQk7HeAf0ze2_svA_ukpJsrX33guSub_XVaOkI5oX-VMyaJsywVLZVhQP7hVKgzVLQoYpR0yS4-UrfzLQle6ow2rAtsbO233RbYvQ6aFQ"/>
+</div>
+</div>
+<!-- Panel Guru -->
+<div class="role-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface-container-lowest p-8 lg:p-12 rounded-3xl shadow-md" id="role-panel-guru">
+<div class="lg:col-span-6 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 text-primary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-lg">supervisor_account</span> Guru Pembimbing Sekolah
+          </div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Monitoring Kunjungan Fisik, Reviu Jurnal &amp; Komunikasi Mentor</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Guru pembimbing dapat menjadwalkan kunjungan supervisi ke perusahaan mitra, memberi umpan balik langsung pada catatan kendala siswa, dan menyelaraskan indikator penilaian kompetensi vokasi bersama pihak industri.
+          </p>
+<ul class="flex flex-col gap-2.5 mt-2 text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+              Log monitoring supervisi berkala dengan geotag foto visit
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+              Reviu &amp; koreksi langsung laporan aktivitas mingguan siswa
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+              Koordinasi real-time via catatan terpadu bersama mentor kantor
+            </li>
+</ul>
+</div>
+<div class="lg:col-span-6">
+<img class="w-full h-80 rounded-2xl object-cover shadow-sm" data-alt="Modern clean software screen showing teacher mentoring monitoring portal with student log review feed, approval buttons, comments drawer, and visit schedule calendar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhwJd186wAeJW4NVzvjezL6J0SpekoQ0JWPvRjYXGBiumiUWd_6NM3MxvGqQP_T7irBRtDG3mUZblCRkqPeAZZ0_it652fY_cjpjd7n5rZ3zOJxXPphT-WCqzMJit_DlO_xj8grKiVIobjHPNchFeoxzwmHwrdnYr7NBPQnaiaNy5sk0o03Iaha-c4KdZ8r_xAIQZe5UFSX7gi27lh6FYq2exwUEde1P25Htt_58JVX9lYosh1X3u2NQ"/>
+</div>
+</div>
+<!-- Panel Mentor -->
+<div class="role-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface-container-lowest p-8 lg:p-12 rounded-3xl shadow-md" id="role-panel-mentor">
+<div class="lg:col-span-6 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 text-primary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-lg">badge</span> Mentor Industri (DUDI)
+          </div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Verifikasi Cepat 1-Klik, Evaluasi Kinerja &amp; Tanda Tangan Digital</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Mentor perusahaan tidak dibebani administrasi rumit. Verifikasi logbook siswa dapat dilakukan via web mobile hanya dengan 1-klik, dilanjutkan pengisian rubrik evaluasi akhir kerja secara efisien.
+          </p>
+<ul class="flex flex-col gap-2.5 mt-2 text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+              Approval massal jurnal mingguan tanpa login berbelit-belit
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+              Rubrik penilaian 8 pilar kesiapan kerja berbasis industri
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+              Otorisasi e-signature langsung pada sertifikat kelulusan PKL
+            </li>
+</ul>
+</div>
+<div class="lg:col-span-6">
+<img class="w-full h-80 rounded-2xl object-cover shadow-sm" data-alt="Corporate mentor evaluation screen showing student skill rating sliders, quick approval tick marks for weekly entries, and official e-signature verification pad, crisp and modern enterprise UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAG6vO-nTkrnms8d0zw7AbUnCdUizMfLnByClaqy2OzxLLAsQysb2o_Sa5vBKZolW1lPI1h01S_9aKnn6NRdGKyFjpcnoxePTFiZMFebIBTYkaX0SIGUfVc1nXV21Auk4sMv-9vM23xvM6PES_mO-CHFN7ER-AsYPqzPARRD1OUQGeMptB3kXR_FCkHhcVReBtEUvXm8xJjT0TNyGBZ94ETT5YFgwXoxQzlYt_euRi1IV9eGO9XJNqgA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ SECTION ACCORDION -->
+<section class="py-20 bg-surface-container-low/50" id="faq">
+<div class="max-w-4xl mx-auto px-6 lg:px-12">
+<div class="text-center mb-14">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold px-3 py-1 bg-surface-container-highest rounded-full mb-3">
+          Tanya Jawab Umum
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-3">
+          Pertanyaan yang Sering Diajukan
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Informasi seputar integrasi, keamanan data, dan kemudahan implementasi PKL CONNECT di sekolah maupun kampus Anda.
+        </p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- FAQ 1 -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden transition-all">
+<button class="w-full flex items-center justify-between p-5 text-left font-title-md text-title-md text-on-surface font-bold" onclick="toggleFaq('faq-1')">
+<span>Apakah sistem ini dapat diintegrasikan dengan Dapodik atau sistem kampus?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="faq-icon-faq-1">expand_more</span>
+</button>
+<div class="hidden px-5 pb-5 font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="faq-body-faq-1">
+            Ya. PKL CONNECT memiliki fitur ekspor data terstruktur yang kompatibel dengan format agregasi Dapodik Kemendikbudristek dan PDDikti. Kami juga menyediakan REST API untuk sinkronisasi database siswa secara otomatis dengan SIAKAD institusi Anda.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden transition-all">
+<button class="w-full flex items-center justify-between p-5 text-left font-title-md text-title-md text-on-surface font-bold" onclick="toggleFaq('faq-2')">
+<span>Bagaimana jika lokasi DUDI memiliki kendala sinyal internet saat presensi?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="faq-icon-faq-2">expand_more</span>
+</button>
+<div class="hidden px-5 pb-5 font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="faq-body-faq-2">
+            Aplikasi PKL CONNECT mendukung mode offline-first. Siswa tetap dapat melakukan check-in dengan rekaman timestamp GPS yang terenkripsi di perangkat lokal, dan data akan otomatis terunggah saat perangkat kembali terhubung ke jaringan internet.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden transition-all">
+<button class="w-full flex items-center justify-between p-5 text-left font-title-md text-title-md text-on-surface font-bold" onclick="toggleFaq('faq-3')">
+<span>Bagaimana legalitas keabsahan sertifikat dan e-signature yang dihasilkan?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="faq-icon-faq-3">expand_more</span>
+</button>
+<div class="hidden px-5 pb-5 font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="faq-body-faq-3">
+            Setiap dokumen sertifikat dilengkapi tanda tangan elektronik berstandar kriptografi dan tautan verifikasi QR Code unik. Siapapun (termasuk rekruter industri di masa depan) dapat memindai QR tersebut untuk membuktikan keaslian nilai dan masa pelaksanaan siswa.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden transition-all">
+<button class="w-full flex items-center justify-between p-5 text-left font-title-md text-title-md text-on-surface font-bold" onclick="toggleFaq('faq-4')">
+<span>Berapa lama proses implementasi dan pelatihan bagi guru dan staf Hubin?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="faq-icon-faq-4">expand_more</span>
+</button>
+<div class="hidden px-5 pb-5 font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="faq-body-faq-4">
+            Proses onboarding hanya memerlukan 3-5 hari kerja. Tim kami mendampingi migrasi data siswa, konfigurasi profil jurusan, serta memberikan sesi bimbingan teknis daring maupun luring hingga seluruh pihak siap mengoperasikan platform.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- CALL TO ACTION BANNER -->
+<section class="py-16 lg:py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary to-primary-container p-10 lg:p-16 text-on-primary shadow-xl">
+<!-- Abstract Shapes for Polish -->
+<div class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-white/10 blur-2xl pointer-events-none"></div>
+<div class="absolute top-0 right-1/4 w-40 h-40 rounded-full bg-white/5 blur-xl pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl flex flex-col items-start">
+<span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/20 backdrop-blur-md font-label-md text-label-md font-semibold text-white mb-6">
+<span class="material-symbols-outlined text-base">rocket_launch</span> Modernisasi Pendidikan Vokasi
+          </span>
+<h2 class="font-headline-lg text-headline-lg text-white font-extrabold tracking-tight lg:text-[40px] lg:leading-[48px] mb-4">
+            Siap Mengakselerasi Manajemen PKL di Institusi Anda?
+          </h2>
+<p class="font-body-lg text-body-lg text-white/90 mb-8 max-w-2xl leading-relaxed">
+            Tinggalkan pencatatan manual berbasis kertas. Jadwalkan sesi presentasi &amp; konsultasi gratis bersama spesialis sistem informasi vokasi kami hari ini.
+          </p>
+<div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
+<a class="inline-flex items-center justify-center gap-2 font-title-sm text-title-sm bg-surface-container-lowest text-primary hover:bg-surface-container-high px-7 py-3.5 rounded-xl shadow-md transition-all font-semibold" href="#">
+<span class="material-symbols-outlined text-lg text-primary">calendar_month</span>
+<span>Konsultasi Implementasi Gratis</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 font-title-sm text-title-sm bg-white/10 hover:bg-white/20 text-white backdrop-blur-md px-6 py-3.5 rounded-xl transition-all font-semibold" href="#">
+<span class="material-symbols-outlined text-lg">download</span>
+<span>Unduh Proposal Solusi (PDF)</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Interactive Client-side Script -->
+<script>
+  function switchRole(roleKey) {
+    const roles = ['siswa', 'admin', 'guru', 'mentor'];
+    
+    // Toggle Panels
+    roles.forEach(function(r) {
+      const panel = document.getElementById('role-panel-' + r);
+      const btn = document.getElementById('tab-btn-' + r);
+      
+      if (r === roleKey) {
+        if (panel) panel.classList.remove('hidden');
+        if (btn) {
+          btn.className = 'role-tab-btn flex-1 py-2.5 px-4 rounded-xl font-title-sm text-title-sm text-on-primary bg-primary shadow-sm transition-all text-center';
+        }
+      } else {
+        if (panel) panel.classList.add('hidden');
+        if (btn) {
+          btn.className = 'role-tab-btn flex-1 py-2.5 px-4 rounded-xl font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-all text-center';
+        }
+      }
+    });
+  }
+
+  function toggleFaq(id) {
+    const body = document.getElementById('faq-body-' + id);
+    const icon = document.getElementById('faq-icon-' + id);
+    
+    if (body) {
+      if (body.classList.contains('hidden')) {
+        body.classList.remove('hidden');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        body.classList.add('hidden');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      }
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.02)] pt-12 pb-8"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10"><div class="md:col-span-2 flex flex-col gap-3"><div class="flex items-center gap-3"><img alt="PKL CONNECT Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VzehvnPP0F156D0uI0DJjGbD5AWBLWPLwblwa4PZqtSq-se-vCaGJKw677JVkumCQHoHNtar6f9d3867LrbOC_WVMr6t_FLbV7KCa8sPnf6jTaKvNc2sPUqgrwA3llDm4Cn_0rnBim90xXHsHEjszt85xCB6KtmGlRYIurgI0OMi8sJ9t14EIyk-nWayE9onhndNIGEjSG1VaSbmEwA--w4-yj0iW67VImov0Aw50wldVu7VrSVA-BAsys"/><span class="font-headline-sm text-headline-sm text-primary font-bold">PKL CONNECT</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md">Platform terintegrasi pengelolaan Praktik Kerja Lapangan, koordinasi kemitraan industri, monitoring logbook real-time, dan evaluasi kompetensi kejuruan.</p></div><div class="flex flex-col gap-2"><span class="font-title-sm text-title-sm text-on-surface font-semibold uppercase tracking-wider mb-2">Navigasi</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" data-path="beranda" href="#">Beranda</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" data-path="alur-pkl" href="#">Alur Pendaftaran</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" data-path="statistik" href="#">Data Penempatan</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" data-path="faq" href="#">Pusat Pertanyaan</a></div><div class="flex flex-col gap-2"><span class="font-title-sm text-title-sm text-on-surface font-semibold uppercase tracking-wider mb-2">Pemberitahuan</span><span class="font-body-sm text-body-sm text-on-surface-variant">Tahun Akademik Aktif: 2024/2025</span><span class="font-label-md text-label-md text-on-surface-variant">Versi Rilis Portal: v2.4 Enterprise</span></div></div><div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant"><p>© 2025 PKL CONNECT. Seluruh Hak Cipta Dilindungi.</p><div class="flex items-center gap-6"><a class="hover:text-on-surface" href="#">Kebijakan Privasi</a><a class="hover:text-on-surface" href="#">Ketentuan Penggunaan</a><a class="hover:text-on-surface" href="#">Pusat Bantuan</a></div></div></div></footer></body></html>

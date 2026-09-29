@@ -1,0 +1,18 @@
+# ------------------------------------------------------------------
+#  Helper untuk instalasi XAMPP di sub-folder (mis. http://localhost/SIPKL/)
+#
+#  Document root Apache menunjuk ke folder proyek ini, sedangkan entry
+#  point Laravel berada di dalam public/. Karena itu URL akar proyek
+#  diarahkan (redirect) ke public/ agar aplikasi — termasuk landing
+#  page SIPKL — bisa dibuka lewat http://localhost/SIPKL/
+#
+#  Cara yang lebih bersih: arahkan DocumentRoot / VirtualHost ke folder
+#  public/ dan hapus file ini.
+# ------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Hanya request persis ke URL akar proyek
+    RewriteRule ^$ %{REQUEST_URI}public/ [R=302,L]
+</IfModule>

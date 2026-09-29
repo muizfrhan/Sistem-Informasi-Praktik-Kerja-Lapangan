@@ -1,0 +1,24 @@
+{
+    "name": "SIPKL — Sistem Informasi Praktik Kerja Lapangan",
+    "short_name": "SIPKL",
+    "description": "Platform terintegrasi untuk mengelola pengajuan, penempatan, monitoring, hingga penilaian Praktik Kerja Lapangan.",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#f8f9ff",
+    "theme_color": "#004ac6",
+    "lang": "id",
+    "icons": [
+        {
+            "src": "images/sipkl-mark.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "images/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ]
+}
